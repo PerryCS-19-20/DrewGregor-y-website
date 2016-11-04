@@ -3,7 +3,11 @@
 <head>
 <title>About Me</title>
 <style>
-
+ body {
+      background-image: url("Alduin.jpg");
+      background-size: cover;
+      color:white;
+      }
 </style>
 </head>
 <body>
