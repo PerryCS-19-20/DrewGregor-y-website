@@ -11,21 +11,19 @@
 </style>
 </head>
 <body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<h3>Things I enjoy:</h3>
+    <ul>
+      <li>Coding</li>
+      <li>Hysterical Laughter</li>
+      <li>Screaming</li>
+      <li>Making people uncomfortable</li>
+      <li>Sci-Fi</li>
+      <li>More screaming</li>
+      <li>Doggos</li>
+      <li>More Doggos</li>
+      <li>Statistics</li>
+      <li>Launching 90kg  projectiles over distances of 300 meters</li>
+    </ul>
+    <h5>I am taking software engineering because I wanted to make websites.</h5>
 </body>
-
-
 </html>
