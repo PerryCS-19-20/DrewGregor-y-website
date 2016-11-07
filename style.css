@@ -45,3 +45,11 @@ li a:hover {
     width:100px;
       height:100px;    
     }
+
+#Me {
+      width:150px;
+        height:200px;
+      } 
+      #titleme {
+        color:lightblue;  
+      }           
