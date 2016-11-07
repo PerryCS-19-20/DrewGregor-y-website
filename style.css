@@ -5,8 +5,7 @@
       }
  #lists {
     list-style-type: none;
-}
- 
+} 
  #textbox {
     list-style-type: none;
     margin: 0;
@@ -50,6 +49,6 @@ li a:hover {
       width:150px;
         height:200px;
       } 
-      #titleme {
-        color:lightblue;  
-      }           
+#titleme {
+color:lightblue;  
+}           
