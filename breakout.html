@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Breakout</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="https://static.codehs.com/gulp/cb01b4a22ffd3971572a8a1ab9f3b7c4cb17f383/chs-js-lib/chs.js"></script>
+		<script>
+                      window.onload = function() {
+var NUM_ROWS = 8;
+var BRICK_TOP_OFFSET = 10;
+var BRICK_SPACING = 2;
+var NUM_BRICKS_PER_ROW = 10;
+var BRICK_HEIGHT = 10;
+var SPACE_FOR_BRICKS = getWidth() - (NUM_BRICKS_PER_ROW + 1) * BRICK_SPACING;
+var BRICK_WIDTH = SPACE_FOR_BRICKS / NUM_BRICKS_PER_ROW;
+var gerry = BRICK_SPACING+ BRICK_HEIGHT;
+var PADDLE_WIDTH = 80;
+var PADDLE_HEIGHT = 15;
+var PADDLE_OFFSET = 10;
+var dx = 10/4*3;
+var dy = 10;
+var ball;
+var BALL_RADIUS = 15;
+var score = 0;
+var paddle = new Rectangle(PADDLE_WIDTH,PADDLE_HEIGHT);
+var determine=1;
+var lives = 2;
+var time = 0;
+var lose;
+var color = Color.RED;
+var yinc = BRICK_HEIGHT+BRICK_SPACING;
+var xbrickspace = BRICK_WIDTH+BRICK_SPACING;
+var BALL_RADIUS = 15;
+var brickdet = 0;
+var ybrickspace = 0;
+var currentbricks = 0;
+var color;
+
+function start(){
+println("You have: " + lives +" Lives Left");
+paddle.setPosition(getWidth()/2-PADDLE_WIDTH/2,getHeight()-PADDLE_OFFSET*2);
+add(paddle);
+	setbricks();
+mouseMoveMethod(movepaddle);
+mouseClickMethod(begin);
+}
+function draw(){
+	ballcheckWalls();
+	ball.move(dx, dy);
+//paddle.setPosition(ball.getX()-PADDLE_WIDTH/2,getHeight()-PADDLE_OFFSET*3);
+// ^ activates cheat mode
+checkbounces();
+}
+function ballcheckWalls(){
+	if(ball.getX() + ball.getRadius() > getWidth()){
+		dx = -dx;
+	}
+	if(ball.getX() - ball.getRadius() < 0){
+		dx = -dx;
+	}
+	if(ball.getY() + ball.getRadius() > getHeight()){
+		ball.setPosition(200,240);
+	stopTimer(draw);
+	determine--;
+	if(lives == 0){
+	   score = new Text("Your Score is " + score);
+	   score.setPosition(115,230);
+	   score.setColor(Randomizer.nextColor());
+	   add(score);
+	   lose = new Text("You lose");
+	   lose.setPosition(140,200);
+lose.setColor(Color.RED);
+	add(lose);
+	}
+	}
+	if(ball.getY() - ball.getRadius() < 0){
+		dy = -dy;
+	}
+}
+function makeball(){
+    var width = getWidth();
+	ball = new Circle(BALL_RADIUS);
+	ball.setPosition(200, 240);
+	add(ball);
+	setTimer(draw, 20);
+}
+function movepaddle(e){
+  paddle.setPosition(e.getX()-PADDLE_WIDTH/2,getHeight()-PADDLE_OFFSET*3);
+  
+  
+  if(e.getX() >= getWidth()-PADDLE_WIDTH/2){
+  paddle.setPosition(getWidth()-PADDLE_WIDTH,getHeight()-PADDLE_OFFSET*3);
+}
+ if(paddle.getX() <= 0){
+   paddle.setPosition(0,getHeight()-PADDLE_OFFSET*3);
+}
+
+
+
+
+}
+function checkbounces(){
+    var upbouncy = getElementAt(ball.getX(),ball.getY()-BALL_RADIUS);
+    if(upbouncy != null && upbouncy!=paddle){
+score++;
+remove(upbouncy);
+    dy=-dy;
+}
+    var downbouncy = getElementAt(ball.getX(),ball.getY()+BALL_RADIUS);
+    if(downbouncy != null && downbouncy!=paddle){
+    score++;
+    remove(downbouncy);
+    dy=-dy;
+}
+    var leftbouncy = getElementAt(ball.getX()-BALL_RADIUS,ball.getY());
+    if(leftbouncy != null && leftbouncy!=paddle){
+    score++;
+    remove(leftbouncy);
+    dx=-dx;
+}
+  var rightbouncy = getElementAt(ball.getX()+BALL_RADIUS,ball.getY());
+    if(rightbouncy != null && rightbouncy!=paddle){
+    score++;
+    remove(rightbouncy);
+    dx=-dx;
+}
+   var bouncy = getElementAt(ball.getX(),ball.getY()+BALL_RADIUS);
+    if(bouncy != null && ball.getY()>=getHeight()/2){
+    dy=-dy;
+}
+if(score>=80){
+    var win = new Text("You Win!");
+    win.setPosition(145,240);
+   win.setColor(Color.BLUE);
+    add(win);
+    stopTimer(draw);
+}
+}
+function begin(e){
+    if(determine==0 && lives!=0){
+       setTimer(draw,20);
+    lives--;
+    println("You have: " + lives +" Lives Left");
+    determine++;
+    }
+}
+function setbricks(){
+    setTimer(makebricks,1);
+}
+function makebricks(){
+    var brick = new Rectangle(BRICK_WIDTH,BRICK_HEIGHT);
+    brick.setPosition(BRICK_SPACING+brickdet,BRICK_TOP_OFFSET+ybrickspace);
+    if(currentbricks==20){
+        color = Color.ORANGE;
+    }
+    if(currentbricks==40){
+        color = Color.GREEN;
+    }
+    if(currentbricks==60){
+        color = Color.BLUE;
+    }
+    brick.setColor(color);
+    add(brick);
+    brickdet+=xbrickspace;
+    currentbricks++;
+if(brickdet >=388){
+ybrickspace+=yinc;
+brickdet =0;
+}
+if (currentbricks==80){
+    stopTimer(makebricks);
+   	makeball();
+    }
+}
+
+                        if (typeof start === 'function') {
+                            start();
+                        }
+                    };
+  	</script>
+		<style>
+			canvas {
+    				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="canvasContainer" width="100%" style="width: 100%; height: 100%; overflow: hidden;">
+			<canvas width="400" height="500" class="codehs-editor-canvas"></canvas>
+		</div>
+	</body>
+</html>
