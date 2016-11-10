@@ -23,7 +23,24 @@ var absxspeed=0;
 var absyspeed=0;
 var numbounces=0;
 function start(){
-    
+    var top = new Line(0,0,getWidth(),0);
+	top.setWidth(2);
+	top.setColor(Color.RED);
+	add(top);	
+	var bottom = new Line(0,getHeight(),getWidth(),getHeight());
+	bottom.setWidth(2);
+	bottom.setColor(Color.RED);
+	add(bottom);
+	var left = new Line(0,0,0,getHeight());
+	left.setWidth(2);
+	left.setColor(Color.RED);
+	add(left);
+	var right = new Line(getWidth(),0,getWidth(),getHeight());
+	right.setWidth(2);
+	right.setColor(Color.RED);
+	add(right);
+	ball.setPosition(getWidth()/2+4,getHeight()/2-175);
+    ball.setColor(Color.RED);
 	add(ball);
     add(string);
     mouseClickMethod(release); 
