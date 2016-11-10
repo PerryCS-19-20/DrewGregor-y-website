@@ -36,13 +36,15 @@ function spin(){
 
     }
     function release(){
-	    if(start ==0){    
-	start++;
+	    if(start <= 0){    
+	
 		    remove(string);
 	    stopTimer(spin);
 	    setTimer(gravity,1);
 	    xspeed = cos*9;
-	    yspeed = sin*9;}
+	    yspeed = sin*9;
+	    start++;
+	    }
 	
 }
 function gravity(){
