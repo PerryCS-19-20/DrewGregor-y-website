@@ -1,1 +1,105 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Breakout</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+     <link rel="icon" href="favicon.ico" type="image/x-icon">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="https://static.codehs.com/gulp/cb01b4a22ffd3971572a8a1ab9f3b7c4cb17f383/chs-js-lib/chs.js"></script>
+		<script>
+                      window.onload = function() {
+var ball = new Circle(18);
+var det = 0;
+var speed = 1;
+var string = new Line(getWidth()/2,getHeight()/2,getWidth()/2,getHeight()/2-175);
+var cos = 0;
+var sin = 0;
+var ac = -0.3;
+var grav = 0;
+var xspeed =0;
+var yspeed =0;
+var absxspeed=0;
+var absyspeed=0;
+var numbounces=0;
+function start(){
+    ball.setPosition(getWidth()/2+4,getHeight()/2-175);
+    add(ball);
+    add(string);
+    mouseClickMethod(release); 
+    setTimer(spin,1);
+}
+function spin(){
+    det++;
+    sin = Math.sin(det/20);
+    cos = Math.cos(det/20);
+    ball.move(cos*9,sin*9);
+    string.setEndpoint(ball.getX(),ball.getY());
 
+    }
+    function release(){
+    remove(string);
+    stopTimer(spin);
+    setTimer(gravity,1);
+    xspeed = cos*9;
+    yspeed = sin*9;
+}
+function gravity(){
+    if(ball.getX() + ball.getRadius() > 400){
+	    xspeed = -80/100*Math.abs(xspeed);
+	}
+	if(ball.getX() - ball.getRadius() < 0){
+	    xspeed = 80/100*Math.abs(xspeed);
+	}
+	if(ball.getY() + ball.getRadius() > getHeight()){
+		yspeed = -92/100*Math.abs(yspeed);
+	    grav = 0;
+	}
+	if(ball.getY() + ball.getRadius() > getHeight()+12){
+		yspeed =0;
+	    grav = 0;
+	    ac=0;
+    	if(xspeed>0){
+    	    xspeed = xspeed-0.2;
+    	}
+    	if(xspeed<0){
+    	    xspeed = xspeed+0.2;
+    	}
+	}
+	if(ball.getY() - ball.getRadius() < 0){
+		yspeed = 1*Math.abs(yspeed);
+	    grav =0;
+	}
+    grav = grav+ac;
+    ball.move(xspeed,yspeed-grav);
+    }
+                        if (typeof start === 'function') {
+                            start();
+                        }
+                    };
+  	</script>
+        
+		<style>
+			canvas {
+    				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id = "textbox">
+  <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/index.html">Home</a></li>
+  <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/index.html">Please Help Me think of things to link to</a></li>
+  <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/index.html">Contact</a></li>
+  <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/Bio.html">About Me</a></li>
+  <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/breakout.html">Breakout</a></li>
+  <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/CircularMotion.html">Physics of Circular Motion</a></li>
+</ul>
+            
+            <div id="canvasContainer" width="100%" style="width: 100%; height: 100%; overflow: hidden;">
+			<canvas width="400" height="500" class="codehs-editor-canvas"></canvas>
+		</div>
+	
+        
+        
+        </body>
+</html>
