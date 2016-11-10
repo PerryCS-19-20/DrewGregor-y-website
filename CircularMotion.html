@@ -19,9 +19,7 @@ var ac = -0.3;
 var grav = 0;
 var xspeed =0;
 var yspeed =0;
-var absxspeed=0;
-var absyspeed=0;
-var numbounces=0;
+var start = 0;			      
 function start(){
     ball.setPosition(getWidth()/2+4,getHeight()/2-175);
     add(ball);
@@ -38,11 +36,13 @@ function spin(){
 
     }
     function release(){
-    remove(string);
-    stopTimer(spin);
-    setTimer(gravity,1);
-    xspeed = cos*9;
-    yspeed = sin*9;
+	    if(start ==0){    
+	remove(string);
+	    stopTimer(spin);
+	    setTimer(gravity,1);
+	    xspeed = cos*9;
+	    yspeed = sin*9;}
+	
 }
 function gravity(){
     if(ball.getX() + ball.getRadius() > 400){
