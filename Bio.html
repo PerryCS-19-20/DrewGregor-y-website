@@ -7,8 +7,8 @@
      <link rel="icon" href="favicon.ico" type="image/x-icon">
     
  <script>
- function changebackground(){
-background-image: url("Metal.jpg");
+ function changebackground(colorName){
+document.body.style.backgroundColor = colorName;
  }
  </script>
  
@@ -34,7 +34,7 @@ background-image: url("Metal.jpg");
       <li>Doggos</li>
       <li>More Doggos</li>
       <li>Statistics</li>
-     <li><span onmouseover="changebackground();">Music</span></li>
+     <li><span onmouseover="changebackground('red');">Music</span></li>
       <li>Launching 90kg  projectiles over distances of 300 meters</li>
     </ul>
     <h5>I am taking software engineering because I wanted to make websites.</h5>
