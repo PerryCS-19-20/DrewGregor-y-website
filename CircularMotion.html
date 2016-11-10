@@ -37,7 +37,8 @@ function spin(){
     }
     function release(){
 	    if(start ==0){    
-	remove(string);
+	start++;
+		    remove(string);
 	    stopTimer(spin);
 	    setTimer(gravity,1);
 	    xspeed = cos*9;
