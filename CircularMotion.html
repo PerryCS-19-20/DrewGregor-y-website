@@ -12,7 +12,7 @@
 var ball = new Circle(18);
 var det = 0;
 var speed = 1;
-var string = new Line(getWidth()/2,getHeight()/2,getWidth()/2,getHeight()/2-500);
+var string;
 var cos = 0;
 var sin = 0;
 var ac = -0.3;
@@ -20,8 +20,10 @@ var grav = 0;
 var xspeed =0;
 var yspeed =0;			      
 var starting = 0;
-setSize(2500,1500);
+
 function start(){
+    string  = new Line(getWidth()/2,getHeight()/2,getWidth()/2,getHeight()/2-500);
+    setSize(2000,1200);
     ball.setPosition(getWidth()/2+4,getHeight()/2-175);
     string.setColor(Color.RED);
     ball.setColor(Color.RED);
