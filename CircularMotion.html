@@ -34,7 +34,7 @@ function start(){
     setTimer(spin,1);
 }
 function spin(){
-    ac=2;
+  
 	det++;
     sin = Math.sin(det/20);
     cos = Math.cos(det/20);
@@ -54,7 +54,7 @@ starting++;
 
 	if(starting == 1){
         stopTimer(gravity);
-		ac=2;
+		
         removeAll();
             ball.setPosition(getWidth()/2+4,getHeight()/2-175);
     add(ball);
@@ -83,7 +83,7 @@ function gravity(){
 	if(ball.getY() + 18 > getHeight()+40){
 		yspeed =0;
 	    grav = 0;
-	    ac=0;
+	   
     	if(xspeed>0){
     	    xspeed = xspeed-0.2;
     	}
