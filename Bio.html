@@ -7,8 +7,10 @@
      <link rel="icon" href="favicon.ico" type="image/x-icon">
     
  <script>
- function changebackground(colorName){
+ function changeColor(colorName){
+document.body.style.backgroundImage = "none";
 document.body.style.backgroundColor = colorName;
+
  }
  </script>
  
@@ -34,7 +36,7 @@ document.body.style.backgroundColor = colorName;
       <li>Doggos</li>
       <li>More Doggos</li>
       <li>Statistics</li>
-     <li><span onmouseover="changebackground('blue');">Music</span></li>
+     <li>Music</li>
       <li>Launching 90kg  projectiles over distances of 300 meters</li>
     </ul>
     <h5>I am taking software engineering because I wanted to make websites.</h5>
@@ -45,5 +47,6 @@ document.body.style.backgroundColor = colorName;
     <li><h3>Gunter:</h3><br><img src = "Gunter.jpg" id = "gunter"></li>
  
  </ul>
+ <h1><span onmouseover="changeColor('blue');">Music</span></h1>
  </body>
 </html>
