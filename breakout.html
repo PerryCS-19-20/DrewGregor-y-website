@@ -42,7 +42,8 @@ var color;
 function start(){
 println("You have: " + lives +" Lives Left");
 paddle.setPosition(getWidth()/2-PADDLE_WIDTH/2,getHeight()-PADDLE_OFFSET*2);
-add(paddle);
+paddle.setColor(Color.YELLOW);
+	add(paddle);
 	setbricks();
 mouseMoveMethod(movepaddle);
 mouseClickMethod(begin);
@@ -84,6 +85,7 @@ function makeball(){
     var width = getWidth();
 	ball = new Circle(BALL_RADIUS);
 	ball.setPosition(200, 240);
+	ball.setColor(Color.YELLOW);
 	add(ball);
 	setTimer(draw, 20);
 }
