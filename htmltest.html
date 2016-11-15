@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <title>Button testing</title>
+    <script>
+        function testHTML(){
+        var userInput = document.getElementById("inputText");
+        var thespan = document.getElementById("kyleisbadatthis");
+        thespan.innerHTML = userInput.value;
+        }       
+    </script>
+</head>
+<body>
+    <textarea rows ="10" cols="80" id ="inputText"> This Says Words!</textarea>
+    <button onclick="testHTML();">Test!</button> 
+</body>
+<h1><span id ="kyleisbadatthis">REEEEEEEE!</span></h1>
+</html>
