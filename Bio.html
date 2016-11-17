@@ -1,104 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>About Me</title>
-<link rel="stylesheet" type="text/css" href="style.css">
- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
- <script>
- function changeColor(colorName){
-document.body.style.backgroundImage = "none";
-document.body.style.backgroundColor = colorName;
- }
-var b = Randomizer.nextInt(1,250);
-var r = Randomizer.nextInt(1,250);
-var g = Randomizer.nextInt(1,250);
-var rint = Randomizer.nextInt(-5,5);
-var gint = Randomizer.nextInt(-5,5);
-var bint = Randomizer.nextInt(-5,5);
- function fun(){
- setTimer(changecolo,10);
- }
-  function changecolo(){
-       r = r + rint;
-        if(r>=240){
-            rint = -rint;
-        } 
-    if(r<=0){
-        r = 0;
-        rint= -rint;
-    }
-       g = g + gint;
-       
-        if(g>=240){
-            gint = -gint;
-       } 
-     if(g<=0){
-        g = 0;
-        gint= -gint;
-    }
-       b = b + bint;
-        if(b>=240){
-            bint = -bint;
-       } 
-     if(b<=0){
-        b = 0;
-        bint= -bint;
-    }
-var color = new Color (r,g,b);
-document.body.style.backgroundImage = "none";
-document.body.style.backgroundColor = color;
-  }
- </script>
- 
- 
- </head>
-<body>
-<ul id = "textbox">
-  <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/index.html">Home</a></li>
-  <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/index.html">Please Help Me think of things to link to</a></li>
-  <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/index.html">Contact</a></li>
-  <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/Bio.html">About Me</a></li>
-  <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/breakout.html">Breakout</a></li>
-  <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/CircularMotion.html">Physics of Circular Motion</a></li>
-  <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/Popup.html">Popup!</a></li>
-  <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/htmltest.html">Html testing!</a></li>
-</ul>
- <h3>Things I enjoy:</h3>
-    <ul>
-      <li>Coding</li>
-      <li>Hysterical Laughter</li>
-      <li>Screaming</li>
-      <li>Making people uncomfortable</li>
-      <li>Sci-Fi</li>
-      <li>More screaming</li>
-      <li><span onmouseover="changeColor('red');">Doggos</span></li>
-      <li>More Doggos</li>
-      <li>Statistics</li>
-     <li>Music</li>
-      <li>Launching 90kg  projectiles over distances of 300 meters</li>
-    </ul>
-    <h5>I am taking software engineering because I wanted to make websites.</h5>
- <h1><span onmouseover="changeColor('turquoise');">My Doggos</span></h1>
-<ul id = "lists">
-    <li><h3>Sammy:</h3><br><img src = "pug.jpg" id = "puggo">
- </li>
-    <li><h3>Gunter:</h3><br><img src = "Gunter.jpg" id = "gunter"></li>
- </ul>
- <h1><span onmouseover="changecolo();">Music</span></h1>
-<h2>I listen to music as often as possible, some of my favorite songs are:</h2>
-<ul>
-<li>"Killer Queen" by Queen</li>
-<li>"Run For The Hills" by Iron Maiden</li>
-<li>"What Do You Do For Money Honey" by AC/DC</li>
-<li>"¡Viva La Gloriá!" by Green Day</li>
-<li>"(Don't Fear) The Reaper" by Blue Öyster Cult </li>
-<li>"Rock The Casbah" by The Clash</li>
-<li>"Civil War" by Guns N' Roses</li>
-<li>"Don't Stop Me Now" by Queen</li>
-<li>"Ashley" by Green Day</li>
-<li>"2 Minutes To Midnight" By Iron Maiden</li>
-<ul>
+ <head>
+  <title>About Me</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   <link rel="icon" href="favicon.ico" type="image/x-icon">    
+  <script>
+   function changeColor(colorName){
+   document.body.style.backgroundImage = "none";
+   document.body.style.backgroundColor = colorName;
+   }
+   </script>
+  </head>
+ <body>
+  <ul id = "textbox">
+   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/index.html">Home</a></li>
+   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/index.html">Please Help Me think of things to link to</a></li>
+   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/index.html">Contact</a></li>
+   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/Bio.html">About Me</a></li>
+   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/breakout.html">Breakout</a></li>
+   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/CircularMotion.html">Physics of Circular Motion</a></li>
+   <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/Popup.html">Popup!</a></li>
+   <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/htmltest.html">Html testing!</a></li>
+  </ul>
+   <h3>Things I enjoy:</h3>
+   <ul>
+    <li>Coding</li>
+    <li>Hysterical Laughter</li>
+    <li>Screaming</li>
+    <li>Making people uncomfortable</li>
+    <li>Sci-Fi</li>
+    <li>More screaming</li>
+    <li><span onmouseover="changeColor('red');">Doggos</span></li>
+    <li>More Doggos</li>
+    <li>Statistics</li>
+    <li>Music</li>
+    <li>Launching 90kg  projectiles over distances of 300 meters</li>
+   </ul>
+   <h5>I am taking software engineering because I wanted to make websites.</h5>
+   <h1><span onmouseover="changeColor('turquoise');">My Doggos</span></h1>
+  <ul id = "lists">
+  <li><h3>Sammy:</h3><br><img src = "pug.jpg" id = "puggo">
+  </li>
+  <li><h3>Gunter:</h3><br><img src = "Gunter.jpg" id = "gunter"></li>
+  </ul>
+  <h1><span onmouseover="changeColor('teal');">Music</span></h1>
+  <h2>I listen to music as often as possible, some of my favorite songs are:</h2>
+  <ul>
+   <li>"Killer Queen" by Queen</li>
+   <li>"Run For The Hills" by Iron Maiden</li>
+   <li>"What Do You Do For Money Honey" by AC/DC</li>
+   <li>"¡Viva La Gloriá!" by Green Day</li>
+   <li>"(Don't Fear) The Reaper" by Blue Öyster Cult </li>
+   <li>"Rock The Casbah" by The Clash</li>
+   <li>"Civil War" by Guns N' Roses</li>
+   <li>"Don't Stop Me Now" by Queen</li>
+   <li>"Ashley" by Green Day</li>
+   <li>"2 Minutes To Midnight" By Iron Maiden</li>
+  <ul>
  </body>
 </html>
