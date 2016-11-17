@@ -10,8 +10,46 @@
  function changeColor(colorName){
 document.body.style.backgroundImage = "none";
 document.body.style.backgroundColor = colorName;
-
  }
+var b = Randomizer.nextInt(1,250);
+var r = Randomizer.nextInt(1,250);
+var g = Randomizer.nextInt(1,250);
+var rint = Randomizer.nextInt(-5,5);
+var gint = Randomizer.nextInt(-5,5);
+var bint = Randomizer.nextInt(-5,5);
+ function fun(){
+ setTimer(changecolo,10);
+ }
+  function changecolo(){
+       r = r + rint;
+        if(r>=240){
+            rint = -rint;
+        } 
+    if(r<=0){
+        r = 0;
+        rint= -rint;
+    }
+       g = g + gint;
+       
+        if(g>=240){
+            gint = -gint;
+       } 
+     if(g<=0){
+        g = 0;
+        gint= -gint;
+    }
+       b = b + bint;
+        if(b>=240){
+            bint = -bint;
+       } 
+     if(b<=0){
+        b = 0;
+        bint= -bint;
+    }
+var color = new Color (r,g,b);
+document.body.style.backgroundImage = "none";
+document.body.style.backgroundColor = color;
+  }
  </script>
  
  
@@ -48,7 +86,7 @@ document.body.style.backgroundColor = colorName;
  </li>
     <li><h3>Gunter:</h3><br><img src = "Gunter.jpg" id = "gunter"></li>
  </ul>
- <h1><span onmouseover="changeColor('teal');">Music</span></h1>
+ <h1><span onmouseover="changecolo();">Music</span></h1>
 <h2>I listen to music as often as possible, some of my favorite songs are:</h2>
 <ul>
 <li>"Killer Queen" by Queen</li>
