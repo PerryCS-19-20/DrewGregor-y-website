@@ -4,10 +4,10 @@
     <title>Button testing</title>
     <script>
         function addlist(){
-           var userInput = document.getElementById("inputText");
-        var thespan = document.getElementById("kyleisbadatthis");
-        document.createElement("huh?");
-       
+        var userInput = document.getElementById("inputText");       
+        var words = document.createElement("li");
+        words.textContent = userInput.value;
+        list.appendChild(words);
     }
 
     </script>
@@ -17,12 +17,12 @@
     <textarea rows ="10" cols="80" id ="inputText"> This Says Words!</textarea>
     <button onclick="addlist();">Test!</button> 
 </body>
-<ul>
+<ul><span id ="list">
 
     
     
     
     
-</ul>
+</span></ul>
 
 </html>
