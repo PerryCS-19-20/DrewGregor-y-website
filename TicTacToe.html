@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <title>Tic-Tac-Toe</title>
+    <style>
+        td{
+            width:300px;
+            height:300px;
+            border: 1px solid black;
+            font-size:200px;
+            text-align:center;
+        }
+        
+    </style>
+    
+    <script>
+    var player = 1;
+    function play(id){
+        
+        var kajigger = document.getElementById(id);       
+          if(player == 1){
+        kajigger.textContent = "X";  
+          player++;
+        }
+        if(player == 2){
+        kajigger.textContent = "O";  
+          player--;
+        }     
+        }
+    </script>
+</head>
+</body>
+<table>
+    <tr>
+        <td id ="a1" onclick="play('a1');"></td>
+        <td id ="a2" onclick="play('a2');"></td>
+        <td id ="a3" onclick="play('a3');"></td>
+    </tr>
+    <tr>
+        <td id ="b1" onclick="play('b1');"></td>
+        <td id ="b2" onclick="play('b2');"></td>
+        <td id ="b3" onclick="play('b3');"></td>
+    </tr>
+    <tr>
+        <td id ="c1" onclick="play('c1');"></td>
+        <td id ="c2" onclick="play('c2');"></td>
+        <td id ="c3" onclick="play('c3');"></td>
+    </tr>
+    
+    
+    
+    
+    
+</table>
+</body>
+</html>
