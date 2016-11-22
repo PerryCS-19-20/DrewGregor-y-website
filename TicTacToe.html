@@ -15,17 +15,27 @@
     
     <script>
     var player = 1;
-    function play(id){
-        
+    
+    function play(id){       
         var kajigger = document.getElementById(id);       
-          if(player == 1){
+          if(kajigger.textContent == "X" || kajigger.textContent == "O"){
+         BEANED.textContent = "WRONG!"   
+        } else {
+        if(player == 1 && kajigger.textContent != "O"){
         kajigger.textContent = "X";  
-          player++;
-        }
-        if(player == 2){
+          player=2;
+          BEANED.textContent = " "
+        } else { if (kajigger.textContent != "X" ){
         kajigger.textContent = "O";  
-          player--;
+          player=1;
+          BEANED.textContent = " "
         }     
+        }
+        }
+        win();
+        }
+        function win(){
+            
         }
     </script>
 </head>
@@ -46,11 +56,12 @@
         <td id ="c2" onclick="play('c2');"></td>
         <td id ="c3" onclick="play('c3');"></td>
     </tr>
-    
+ 
     
     
     
     
 </table>
+   <h1 id ="BEANED"></h1>
 </body>
 </html>
