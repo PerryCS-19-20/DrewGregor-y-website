@@ -1,50 +1,70 @@
 <!doctype html>
 <html>
-<head>
-    <title>Tic-Tac-Toe</title>
-   <link rel="stylesheet" type="text/css" href="style.css">
- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-     <link rel="icon" href="favicon.ico" type="image/x-icon">
-	
-
- <style>
+    <head>
+        <title>Tic-Tac-Toe</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <style>
         td{
             width:300px;
             height:300px;
-            border: 1px solid black;
+            border: 1px solid white;
             font-size:200px;
-            text-align:center;
-        }
-        
-    </style>
-    
+            text-align:center;           
+        }        
+    </style>   
     <script>
     var player = 1;
-    
+    var winners = 0;
     function play(id){       
+        if(winners ==0){
         var kajigger = document.getElementById(id);       
           if(kajigger.textContent == "X" || kajigger.textContent == "O"){
-         BEANED.textContent = "WRONG!"   
+         BEANED.textContent = "WRONG!";   
         } else {
         if(player == 1 && kajigger.textContent != "O"){
         kajigger.textContent = "X";  
           player=2;
-          BEANED.textContent = " "
+          BEANED.textContent = " ";
         } else { if (kajigger.textContent != "X" ){
         kajigger.textContent = "O";  
           player=1;
-          BEANED.textContent = " "
+          BEANED.textContent = " ";
         }     
         }
         }
-        win();
+        checkwin();
         }
-        function win(){
-            
-        }
+    }
+        function checkwin(){
+          checkrows(a1,a2,a3); 
+          checkrows(b1,b2,b3); 
+          checkrows(c1,c2,c3); 
+          checkrows(a1,b1,c1); 
+          checkrows(a2,b2,c2); 
+          checkrows(a3,b3,c3); 
+          checkrows(a1,b2,c3); 
+          checkrows(a3,b2,c1);    
+    }
+        function checkrows(first,second,third){
+           var uno = document.getElementById(first); 
+           var dos = document.getElementById(second); 
+           var tre = document.getElementById(third); 
+          if(first.textContent == second.textContent && second.textContent == third.textContent && first.textContent == third.textContent && first.textContent !=""){                               
+            if(first.textContent == "O"){
+                BEANED.textContent = " O Wins"
+          }
+          if(first.textContent == "X"){
+           BEANED.textContent = " X Wins"
+          }
+          winners++;
+        }            
+        }       
     </script>
 </head>
 </body>
+<center>
 <table>
     <tr>
         <td id ="a1" onclick="play('a1');"></td>
@@ -60,13 +80,10 @@
         <td id ="c1" onclick="play('c1');"></td>
         <td id ="c2" onclick="play('c2');"></td>
         <td id ="c3" onclick="play('c3');"></td>
-    </tr>
- 
-    
-    
-    
-    
+    </tr>    
 </table>
    <h1 id ="BEANED"></h1>
+</center>
 </body>
 </html>
+
