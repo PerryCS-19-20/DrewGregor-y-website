@@ -7,10 +7,10 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script>
         function addlist(){
-      for (var i =0; i>100; i++){
+      for (var i =0; i<100; i++){
   var userInput = document.getElementById("inputText");       
         var words = document.createElement("li");
-        words.textContent = userInput.value;
+        words.textContent = "I Will Not " + userInput.value;
         list.appendChild(words);
 }
     }
