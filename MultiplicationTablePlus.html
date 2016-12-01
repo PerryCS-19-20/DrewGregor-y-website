@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name=""viewport" content="width=device-width">
+        <title>Better Table</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <style>
+            table, td {
+                border: solid 1px;
+         
+            }  
+            td{
+                text-align: center;
+            }
+    </style>   
+
+</head>
+<body onload="buildTimesTable();">
+<ul id = "textbox">
+   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/index.html">Home</a></li>
+   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/index.html">Please Help Me think of things to link to</a></li>
+   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/index.html">Contact</a></li>
+   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/Bio.html">About Me</a></li>
+   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/breakout.html">Breakout</a></li>
+   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/CircularMotion.html">Physics of Circular Motion</a></li>
+   <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/Popup.html">Popup!</a></li>
+   <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/htmltest.html">Html testing!</a></li>
+    <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/todolist.html"> To Do List!</a></li>
+   <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/TicTacToe.html">Tic Tac Toe</a></li>
+    <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/Chalkboard.html">Chalkboard</a></li>
+  </ul>
+    <script>
+          function buildTimesTable(){
+              if(inputText.textContent <1000 && inputText.textContent >10){
+        var max = inputText.textContent;
+              }
+              var max = 101;
+        var timesTable = document.createElement("table");
+              timesTable.id = "timesTable";
+              var body = document.body;
+              body.appendChild(timesTable);
+              
+                
+              
+                for(var i=0; i<max; i++){
+                
+                var row = document.createElement("tr");
+                timesTable.appendChild(row);
+                
+                row.textContent= i;
+                for(var j=1; j<max; j++){
+                if(i!=0){
+                var column = document.createElement("td");
+                row.appendChild(column);
+                column.textContent= i*j;
+                if(j == 1 || j ==4 || j==7 || j==10){
+                    column.style.color ="green";
+                } else {
+                    column.style.color ="blue";
+                }
+                
+                }
+                
+                if(i==0){
+                var column = document.createElement("th");
+                row.appendChild(column);
+                column.textContent= j;               
+                }
+                
+                }
+                
+                }
+    
+    }
+    </script>
+<textarea rows ="10" cols="80" id ="inputText"></textarea>
+    <button onclick="buildTimesTable();">Write</button>
+</body>
+</html>
