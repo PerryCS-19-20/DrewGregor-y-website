@@ -8,12 +8,12 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <style>
-            table, td, th {
+            table, td {
                 border: solid 1px;
          
             }  
             td{
-                text-align: right;
+                text-align: center;
             }
     </style>   
 
@@ -39,33 +39,50 @@
               var body = document.body;
               body.appendChild(timesTable);
               
-              for(var i=0; i<11; i++){
+                
+              
+                for(var i=0; i<11; i++){
+                
                 var row = document.createElement("tr");
                 timesTable.appendChild(row);
                 
-                for(var j=0; j<11; j++){
-                  var words;
-                  if(i==0 || j==0){
-                  
-                    if(i!=0){
-                      var words = document.createElement("td");
-                    words.textContent= i;
-                  }
-                  else{
-                      var words = document.createElement("th");
-                    words.textContent= j;
-                  }
+                row.textContent= i;
+                for(var j=1; j<11; j++){
+                if(i!=0){
+                var column = document.createElement("td");
+                row.appendChild(column);
+                column.textContent= i*j;
+                if(j == 1 || j ==4 || j==7 || j==10){
+                    column.style.color ="green";
+                } else {
+                    column.style.color ="blanchedalmond";
+                }
+                
+                }
+                
+                if(i==0){
+                var column = document.createElement("th");
+                row.appendChild(column);
+                column.textContent= j;               
+                }
+                
+                }
+                
+                }
+            
+            
                   
                  
-                row.appendChild(words);
-              }  
+             
+               
               
-           }
+           
             
-        }
+        
         
     }
     </script>
 
 </body>
 </html>
+
