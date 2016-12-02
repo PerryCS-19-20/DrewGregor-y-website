@@ -33,11 +33,12 @@
     <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/Chalkboard.html">Chalkboard</a></li>
   </ul>
     <script>
-          function buildTimesTable(){
-              if(inputText.textContent <1000 && inputText.textContent >10){
-        var max = inputText.textContent;
-              }
-              var max = 101;
+          
+    function buildTimesTable(){
+            
+        
+              var maxj = tableWidth.value;
+        var maxi = tableHeight.value;
         var timesTable = document.createElement("table");
               timesTable.id = "timesTable";
               var body = document.body;
@@ -45,20 +46,21 @@
               
                 
               
-                for(var i=0; i<max; i++){
+                for(var i=0; i<maxi; i++){
                 
                 var row = document.createElement("tr");
                 timesTable.appendChild(row);
                 
                 row.textContent= i;
-                for(var j=1; j<max; j++){
+                for(var j=1; j<maxj; j++){
                 if(i!=0){
                 var column = document.createElement("td");
                 row.appendChild(column);
                 column.textContent= i*j;
-                if(j == 1 || j ==4 || j==7 || j==10){
+                if(j % 3 ==1){
                     column.style.color ="green";
-                } else {
+                } 
+                if(j% 2 ==1){
                     column.style.color ="blue";
                 }
                 
@@ -72,11 +74,16 @@
                 
                 }
                 
-                }
-    
+                }       
+    }
+    function fix (){
+        if(timesTable != null){
+            timesTable.parentNode.removeChild(timesTable);
+            buildTimesTable();
+        }
     }
     </script>
-<textarea rows ="10" cols="80" id ="inputText"></textarea>
-    <button onclick="buildTimesTable();">Write</button>
+    Table Width:<input type="range" id ="tableWidth" min="2" max ="101" value="10" onchange="fix();"><br>
+Table Height:<input type="range" id ="tableHeight" min="2" max ="101" value="10" onchange="fix();"><br>
 </body>
 </html>
