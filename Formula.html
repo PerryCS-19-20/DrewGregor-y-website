@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Quadratic Solver </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script>
+    function quad(){
+    var A = document.getElementById("valueA").value;    
+    var B = document.getElementById("valueB").value;  
+    var C = document.getElementById("valueC").value;     
+        var positive= (-B+Math.sqrt((B*B)-(4*A*C)))/(2*A);
+        var negative= (-B-Math.sqrt((B*B)-(4*A*C)))/(2*A);       
+        pos.value= positive;
+        neg.value=negative;
+    }
+    </script>
+    <style>
+        #solver{
+            width:100px;
+            color:black;
+            background-color:lightsteelblue;
+            border-color:darkslategrey;
+        } 
+        
+    </style>
+    <title>Quadratic Solver </title>
 </head>
 <body>
+<center>
+    <h1><b>Quadratic Solver</b></h1>
+    <h2>0=Ax^2+Bx+C</h2>
 Value of A: <input type="number" id="valueA" placeholder="valueA"><br>
 Value of B: <input type="number" id="valueB" placeholder="valueB"><br>
-Value of C: <input type="number" id="valueC" placeholder="valueC"><br>
-<button onclick="quad();">Solve</button>
-Positive Solution: <input type="output" id="pos" placeholder="pos" readonly>
-Negative Solution: <input type="output" id="neg" placeholder="neg" readonly>
+Value of C: <input type="number" id="valueC" placeholder="valueC"><hr>
+<button id ="solver"onclick="quad();"><b>Solve</b></button><hr>
+First Solution: X = <input type="output" id="pos" placeholder="pos" readonly><br>
+Second Solution: X = <input type="output" id="neg" placeholder="neg" readonly><br>
+</center>
 </body>
 </html>
