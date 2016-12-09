@@ -6,7 +6,7 @@ function buildMap(id){
     "Index","index.html",
     "Bio", "Bio.html",
     "Formula","Formula.html",
-    "Multiplication Table","multiplicaiontable.html",
+    "Multiplication Table","multiplicationtable.html",
     "Breakout", "breakout.html",
     "Multiplication Slider", "MultiplicationTablePlus.html",
     "Physics Simulator", "CircularMotion.html",
