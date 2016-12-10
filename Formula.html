@@ -9,6 +9,13 @@
     var A = document.getElementById("valueA").value;    
     var B = document.getElementById("valueB").value;  
     var C = document.getElementById("valueC").value;     
+    var Avl = document.getElementById(Av);
+    var Bvl = document.getElementById(Bv);
+    var Cvl = document.getElementById(Bv);
+       Avl.textContent=A; 
+        Bvl.textContent=B; 
+        Cvl.textContent=B; 
+        
         var positive= (-B+Math.sqrt((B*B)-(4*A*C)))/(2*A);
         var negative= (-B-Math.sqrt((B*B)-(4*A*C)))/(2*A);       
         pos.value= positive;
@@ -46,7 +53,7 @@
   </ul>
     <center>
     <h1><b>Quadratic Solver</b></h1>
-    <h2>0=Ax^2+Bx+C</h2>
+        <h2>0=<span id = "Av">A</span>x^2+<span id ="Bv">B</span>x+<span id = "Cv">C</span></h2>
 Value of A: <input type="number" id="valueA" placeholder="valueA"><br>
 Value of B: <input type="number" id="valueB" placeholder="valueB"><br>
 Value of C: <input type="number" id="valueC" placeholder="valueC"><hr>
