@@ -22,7 +22,7 @@ display: inline-block;
 padding: 8px;
 }
 #menubar ul li a:hover {
-	background-color: red;
+	background-color: gray;
 	color: white;
 }
 #menubar ul li {
@@ -50,7 +50,6 @@ color: black;
 	background-color: grey;
 	color: white;
 }
-
 #puggo{
  width:200px;
   height:200px;
@@ -69,3 +68,4 @@ color:lightblue;
 #four{
 text-align:center;
 }
+
