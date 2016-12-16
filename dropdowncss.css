@@ -7,7 +7,7 @@ body {
 	position: relative;
 	padding: 0px;
 	display: block;
-background-color: lightgray;
+background-color:#f9f9f9;
 }
 #menubar > ul {
 	position: relative;
@@ -22,7 +22,7 @@ display: inline-block;
 padding: 8px;
 }
 #menubar ul li a:hover {
-	background-color: gray;
+	background-color:#f1f1f1
 	color: white;
 }
 #menubar ul li {
@@ -32,7 +32,7 @@ text-indent: 0px;
 #menubar ul ul {
 	display: none;
 	position: absolute;
-background-color: lightgrey;
+background-color:#f9f9f9;
 padding: 0px;
 }
 #menubar ul li:hover ul,
@@ -47,7 +47,7 @@ color: black;
 	text-decoration: none;
 }
 #menubar ul ul li a:hover {
-	background-color: grey;
+	background-color:#f1f1f1
 	color: white;
 }
 #puggo{
