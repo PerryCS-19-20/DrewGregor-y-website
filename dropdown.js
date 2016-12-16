@@ -24,7 +24,7 @@ function buildMap(id){
     droptitles.appendChild(dropdownbar);
     var newindex = new Array(
     "Formula","Formula.html",
-    "Multiplication Table","multiplicaiontable.html",
+    "Multiplication Table","multiplicationtable.html",
     "Breakout", "breakout.html",
     "Multiplication Slider", "MultiplicationTablePlus.html",
     "Chalkboard","Chalkboard.html",
