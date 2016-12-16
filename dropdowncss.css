@@ -1,0 +1,71 @@
+body {
+      background-image: url("Alduin.jpg");
+      background-size: cover;
+      color:white;
+      }
+#menubar {
+	position: relative;
+	padding: 0px;
+	display: block;
+background-color: gray;
+}
+#menubar > ul {
+	position: relative;
+	display:  inline-block;
+	text-decoration: none;
+	list-style-type: none;
+margin: 0;
+padding: 0;
+}
+#menubar > ul > li {
+display: inline-block;
+padding: 8px;
+}
+#menubar ul li a:hover {
+	background-color: red;
+	color: white;
+}
+#menubar ul li {
+	list-style: none;
+text-indent: 0px;
+}
+#menubar ul ul {
+	display: none;
+	position: absolute;
+background-color: lightgrey;
+padding: 0px;
+}
+#menubar ul li:hover ul,
+#menubar ul li:focus ul,
+#menubar ul li:active ul {
+	display: block;
+}
+#menubar a {
+	display: block;
+color: black;
+	padding: 8px;
+	text-decoration: none;
+}
+#menubar ul ul li a:hover {
+	background-color: grey;
+	color: white;
+}
+
+#puggo{
+ width:200px;
+  height:200px;
+ }
+ #gunter{
+ width:200px;
+  height:250px;
+ }
+#Me {
+      width:150px;
+        height:200px;
+      } 
+#titleme {
+color:lightblue;  
+}   
+#four{
+text-align:center;
+}
