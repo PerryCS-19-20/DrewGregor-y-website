@@ -20,14 +20,16 @@ padding: 0;
 #menubar > ul > li {
 display: inline-block;
 padding: 8px;
+color:white;
 }
 #menubar ul li a:hover {
-	background-color:#f1f1f1
+	background-color: darkgray;
 	color: white;
 }
 #menubar ul li {
 	list-style: none;
 text-indent: 0px;
+color:white;
 }
 #menubar ul ul {
 	display: none;
@@ -42,12 +44,12 @@ padding: 0px;
 }
 #menubar a {
 	display: block;
-color: black;
+color: white;
 	padding: 8px;
 	text-decoration: none;
 }
 #menubar ul ul li a:hover {
-	background-color:#f1f1f1
+	background-color: darkgrey;
 	color: white;
 }
 #puggo{
@@ -68,4 +70,3 @@ color:lightblue;
 #four{
 text-align:center;
 }
-
