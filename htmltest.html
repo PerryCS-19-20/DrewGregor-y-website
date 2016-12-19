@@ -1,10 +1,12 @@
 <!doctype html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="dropdowncss.css">
  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
      <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Button testing</title>
+    <script src="dropdown.js">
+  </script>
     <script>
         function testHTML(){
         var userInput = document.getElementById("inputText");
@@ -13,25 +15,9 @@
         }  
     </script>
 </head>
-<body>
-    <ul id = "textbox">
-   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/index.html">Home</a></li>
-   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/index.html">Please Help Me think of things to link to</a></li>
-   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/index.html">Contact</a></li>
-   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/Bio.html">About Me</a></li>
-   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/breakout.html">Breakout</a></li>
-   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/CircularMotion.html">Physics of Circular Motion</a></li>
-   <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/Popup.html">Popup!</a></li>
-   <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/htmltest.html">Html testing!</a></li>
-    <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/todolist.html"> To Do List!</a></li>
-   <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/TicTacToe.html">Tic Tac Toe</a></li>
-    <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/Chalkboard.html">Chalkboard</a></li>
-    <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/multiplicationtable.html">Multiplication Table</a></li>
-    <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/MultiplicationTablePlus.html">Multiplication Slider</a></li>
-        <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/Formula.html">Formula</a></li>
-    <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/sitemap.html">Sitemap</a></li>
-
-  </ul>
+<body onload="buildMap('menubar');">
+    <div id ="menubar">
+    </div>
     <textarea rows ="10" cols="80" id ="inputText"> This Says Words!</textarea>
     <button onclick="testHTML();">Apply</button> 
 </body>
