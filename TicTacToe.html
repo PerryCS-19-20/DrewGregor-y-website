@@ -2,9 +2,11 @@
 <html>
     <head>
         <title>Tic-Tac-Toe</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="dropdowncss.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <script src="dropdown.js">
+  </script>
         <style>
         td{
             width:300px;
@@ -66,25 +68,9 @@
         }       
     </script>
 </head>
-<body>
-<ul id = "textbox">
-   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/index.html">Home</a></li>
-   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/index.html">Please Help Me think of things to link to</a></li>
-   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/index.html">Contact</a></li>
-   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/Bio.html">About Me</a></li>
-   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/breakout.html">Breakout</a></li>
-   <li id = "listbox"><a href="https://perryma.tk/DrewGregor-y-website/CircularMotion.html">Physics of Circular Motion</a></li>
-   <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/Popup.html">Popup!</a></li>
-   <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/htmltest.html">Html testing!</a></li>
-    <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/todolist.html"> To Do List!</a></li>
-   <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/TicTacToe.html">Tic Tac Toe</a></li>
-    <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/Chalkboard.html">Chalkboard</a></li>
-    <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/multiplicationtable.html">Multiplication Table</a></li>
-    <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/MultiplicationTablePlus.html">Multiplication Slider</a></li>
-    <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/Formula.html">Formula</a></li>
-    <li id ="listbox"> <a href ="https://perryma.tk/DrewGregor-y-website/sitemap.html">Sitemap</a></li>
-
-  </ul>
+<body onload="buildMap('menubar');">
+    <div id="menubar">
+    </div>
     <center>
          <h2> "A strange game. The only winning move is not to play." - Joshua,<i> War Games</i></h2>
 <table>
