@@ -1,14 +1,13 @@
 <!doctype html>
 <html>
     <head>
-        <title>Better Table</title>
+        <title>Multiplication Table Slider</title>
         <link rel="stylesheet" type="text/css" href="dropdowncss.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <style>
             table, td {
                 border: solid 1px;
-         
             }  
             td{
                 text-align: center;
@@ -16,30 +15,21 @@
     </style>  
   <script src="dropdown.js">
   </script>
-
 </head>
 <body onload="buildTimesTable(); buildMap('menubar');">
 <div id ="menubar">
     </div>
-    <script>
-          
+    <script>        
     function buildTimesTable(){
-            
-        
               var maxj = tableWidth.value;
         var maxi = tableHeight.value;
         var timesTable = document.createElement("table");
               timesTable.id = "timesTable";
               var body = document.body;
               body.appendChild(timesTable);
-              
-                
-              
-                for(var i=0; i<maxi; i++){
-                
+                for(var i=0; i<maxi; i++){  
                 var row = document.createElement("tr");
-                timesTable.appendChild(row);
-                
+                timesTable.appendChild(row);  
                 row.textContent= i;
                 for(var j=1; j<maxj; j++){
                 if(i!=0){
@@ -55,9 +45,7 @@
                 if(i ==j){
                     column.style.color ="orange";
                 }
-                
                 }
-                
                 if(i==0){
                 var column = document.createElement("th");
                 row.appendChild(column);
